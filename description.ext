@@ -1,0 +1,377 @@
+author = "XFiRE ARMY";
+OnLoadName = "Good Morning Takistan";
+OnLoadMission = "Assault and Rescue :)";
+
+
+//------------------------- Respawn
+
+//respawnTemplates[] = { "MenuPosition" };
+respawnOnStart = 0;
+
+
+class CfgMusic
+{
+ tracks[]={};
+
+ class music1
+	{
+	name = "music1";
+	sound[] = {"\music\good.ogg", db+1, 1.0};
+	};
+	
+ class intro
+	{
+	name = "intro";
+	sound[] = {"\music\intro.ogg", db+1, 1.0};
+	};
+};
+
+class CfgSounds
+{
+	class furnal
+	{
+		name = "furnal";
+		sound[] = {"\sound\furnal.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class burned
+	{
+		name = "burned";
+		sound[] = {"\sound\burned.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class tipat
+	{
+		name = "tipat";
+		sound[] = {"\sound\tipat.ogg", 0.8, 1};
+		titles[] = {1, ""};
+	};
+	class bombix
+	{
+		name = "bombix";
+		sound[] = {"\sound\bombix.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class bombix_echo
+	{
+		name = "bombix_echo";
+		sound[] = {"\sound\bombix_echo.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};
+	class earthquake_01
+	{
+		name = "earthquake_01";
+		sound[] = {"\sound\earthquake_01.ogg", 0.7, 1};
+		titles[] = {1, ""};
+	};
+	class earthquake_02
+	{
+		name = "earthquake_02";
+		sound[] = {"\sound\earthquake_02.ogg", 0.7, 1};
+		titles[] = {1, ""};
+	};
+	class rock_slide
+	{
+		name = "rock_slide";
+		sound[] = {"\sound\rock_slide.ogg", db+25, 1};
+		titles[] = {1, ""};
+	};
+	class rock1
+	{
+		name = "rock1";
+		sound[] = {"\sound\rock1.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class rock2
+	{
+		name = "rock2";
+		sound[] = {"\sound\rock2.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class rock3
+	{
+		name = "rock3";
+		sound[] = {"\sound\rock3.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class rock4
+	{
+		name = "rock4";
+		sound[] = {"\sound\rock4.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class rock5
+	{
+		name = "rock5";
+		sound[] = {"\sound\rock5.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class rock_slide_scurt
+	{
+		name = "rock_slide_scurt";
+		sound[] = {"\sound\rock_slide_scurt.ogg", db+25, 1};
+		titles[] = {1, ""};
+	};
+	class 01_impact_stone
+	{
+		name = "01_impact_stone";
+		sound[] = {"\sound\01_impact_stone.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class 02_impact_stone
+	{
+		name = "02_impact_stone";
+		sound[] = {"\sound\02_impact_stone.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class 03_impact_stone
+	{
+		name = "03_impact_stone";
+		sound[] = {"\sound\03_impact_stone.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class 04_impact_stone
+	{
+		name = "04_impact_stone";
+		sound[] = {"\sound\04_impact_stone.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class 05_impact_stone
+	{
+		name = "05_impact_stone";
+		sound[] = {"\sound\05_impact_stone.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class 06_impact_stone
+	{
+		name = "06_impact_stone";
+		sound[] = {"\sound\06_impact_stone.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class uragan_1
+	{
+		name = "uragan_1";
+		sound[] = {"\sound\uragan_1.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};
+	class bcg_wind
+	{
+		name = "bcg_wind";
+		sound[] = {"\sound\bcg_wind.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};	
+	class rafala_1
+	{
+		name = "rafala_1";
+		sound[] = {"\sound\rafala_1.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};	
+	class rafala_4_dr
+	{
+		name = "rafala_4_dr";
+		sound[] = {"\sound\rafala_4_dr.ogg", db+1, 1};
+		titles[] = {1, ""};
+	};	
+	class rafala_5_st
+	{
+		name = "rafala_5_st";
+		sound[] = {"\sound\rafala_5_st.ogg", db+1, 1};
+		titles[] = {1, ""};
+	};
+	class sandstorm
+	{
+		name = "sandstorm";
+		sound[] = {"\sound\sandstorm.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class radio
+	{
+		name = "radio"; // Name for mission editor
+		sound[] = {\media\radio.ogg, db-5, 1.0};
+		titles[] = {0, ""};
+	};
+	class Allahu
+	{
+		name = "Allahu"; // Name for mission editor
+		sound[] = {\Sound\Allahu.ogg, db-5, 1.0};
+		titles[] = {0, ""};
+	};
+	class bomb
+	{
+		name = "bomb"; // Name for mission editor
+		sound[] = {\media\bomb.ogg, db+10, 1.0};
+		titles[] = {0, ""};
+	};
+	class fluier_1
+	{
+		name = "fluier_1"; // Name for mission editor
+		sound[] = {\sound\fluier_1.ogg, db+5, 1.0};
+		titles[] = {0, ""};
+	};
+	class fluier_2
+	{
+		name = "fluier_2"; // Name for mission editor
+		sound[] = {\sound\fluier_2.ogg, db+5, 1.0};
+		titles[] = {0, ""};
+	};	
+	class fluier_3
+	{
+		name = "fluier_3"; // Name for mission editor
+		sound[] = {\sound\fluier_3.ogg, db+5, 1.0};
+		titles[] = {0, ""};
+	};	
+	class fluier_4
+	{
+		name = "fluier_4"; // Name for mission editor
+		sound[] = {\sound\fluier_4.ogg, db+5, 1.0};
+		titles[] = {0, ""};
+	};
+	class fluier_5
+	{
+		name = "fluier_5"; // Name for mission editor
+		sound[] = {\sound\fluier_5.ogg, db+5, 1.0};
+		titles[] = {0, ""};
+	};
+	class fluier_6
+	{
+		name = "fluier_6"; // Name for mission editor
+		sound[] = {\sound\fluier_6.ogg, db+5, 1.0};
+		titles[] = {0, ""};
+	};
+	class fluier_7
+	{
+		name = "fluier_7"; // Name for mission editor
+		sound[] = {\sound\fluier_7.ogg, db+5, 1.0};
+		titles[] = {0, ""};
+	};
+	class fluier_8
+	{
+		name = "fluier_8"; // Name for mission editor
+		sound[] = {\sound\fluier_8.ogg, db+5, 1.0};
+		titles[] = {0, ""};
+	};
+	class fluier_9
+	{
+		name = "fluier_9"; // Name for mission editor
+		sound[] = {\sound\fluier_9.ogg, db+5, 1.0};
+		titles[] = {0, ""};
+	};
+	class fluier_91
+	{
+		name = "fluier_91"; // Name for mission editor
+		sound[] = {\sound\fluier_91.ogg, db+5, 1.0};
+		titles[] = {0, ""};
+	};
+	class fluier_92
+	{
+		name = "fluier_92"; // Name for mission editor
+		sound[] = {\sound\fluier_92.ogg, db+5, 1.0};
+		titles[] = {0, ""};
+	};
+	class fluier_93
+	{
+		name = "fluier_93"; // Name for mission editor
+		sound[] = {\sound\fluier_93.ogg, db+5, 1.0};
+		titles[] = {0, ""};
+	};
+	// List of sounds (.ogg files without the .ogg extension)
+	sounds[] = {gun1, gun2, gun4, gun4, gun5, ringtone, urale, allahu_akbar ,geiger, sandstorm, prayer_1, prayer_2, expozie, alarma_militar, intro_music, outro_music, NoSound};
+
+	// Definition for each sound
+	class 01
+	{
+		name = "01";
+		sound[] = {"\sound\01.ogg", 0.8, 1};
+		titles[] = {1, ""};
+	};		
+	class 02
+	{
+		name = "02";
+		sound[] = {"\sound\02.ogg", 0.8, 1};
+		titles[] = {1, ""};
+	};	
+	class 03
+	{
+		name = "03";
+		sound[] = {"\sound\03.ogg", 0.8, 1};
+		titles[] = {1, ""};
+	};		
+	class 04
+	{
+		name = "04";
+		sound[] = {"\sound\04.ogg", 0.8, 1};
+		titles[] = {1, ""};
+	};	
+	class 05
+	{
+		name = "05";
+		sound[] = {"\sound\05.ogg", 0.8, 1};
+		titles[] = {1, ""};
+	};		
+	class 06
+	{
+		name = "06";
+		sound[] = {"\sound\06.ogg", 0.8, 1};
+		titles[] = {1, ""};
+	};	
+	class 07
+	{
+		name = "07";
+		sound[] = {"\sound\07.ogg", 0.8, 1};
+		titles[] = {1, ""};
+	};		
+	class 08
+	{
+		name = "08";
+		sound[] = {"\sound\08.ogg", 0.8, 1};
+		titles[] = {1, ""};
+	};	
+	class 09
+	{
+		name = "09";
+		sound[] = {"\sound\09.ogg", 0.8, 1};
+		titles[] = {1, ""};
+	};		
+	class 099
+	{
+		name = "099";
+		sound[] = {"\sound\099.ogg", 0.8, 1};
+		titles[] = {1, ""};
+	};		
+
+	class NoSound 
+	{
+		name = "NoSound";
+		sound[] = {"", 0, 1};
+		titles[] = {0, ""};
+	};
+}
+
+class Params
+{
+	class Earthquakes
+	{
+		title = $STR_A3_Escape_param_earthquakes;
+		values[] = {0, 1};
+		texts[] = {$STR_disabled, $STR_enabled};
+		default = 1;
+		file = "params\setEarthquakes.sqf";
+	};
+	
+	
+	#define DAYTIMEHOUR_DEFAULT		06
+	#define WEATHER_DEFAULT			25
+	#define DEBUGCONSOLE_DEFAULT		0
+	#define TIMEACCELERATION_DEFAULT	1
+
+	#define VIEW_DISTANCE_MIN		1000
+	#define VIEW_DISTANCE_MAX		3500
+	#define VIEW_DISTANCE_DEFAULT		1500
+
+	#include "\a3\functions_f\Params\paramDaytimeHour.inc"
+	#include "\a3\functions_f\Params\paramWeather.inc"
+	#include "\a3\functions_f\Params\paramDebugConsole.inc"
+	#include "\a3\Functions_F_MP_Mark\Params\paramTimeAcceleration.inc"
+	#include "\a3\Functions_F_Heli\Params\paramViewDistance.inc"
+    #include "\a3\functions_f\params\paramRevive.inc"
+};
