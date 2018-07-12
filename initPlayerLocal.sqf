@@ -47,42 +47,48 @@ params[ "_unit" ];
 
 if ( isPlayer _unit && { !local _unit } ) exitWith {};
 
-if ( isPlayer _unit ) then {
-	_unit removeAllEventHandlers 'HandleDamage';
-};
+private _reviveMode = ["ReviveMode",-100] call BIS_fnc_getParamValue;
 
-_unit addEventHandler [ "HandleDamage", {
-	params ["_unit", "_hitSelection", "_damage","_source","_projectile","_hitPartIndex", "_instigator", "_hitPoint"];
-	
-	private _incomingDamage = _damage;
-	private _oldDamage = 0;
-	if (_hitSelection isEqualTo "") then {_oldDamage = damage _unit} else {_oldDamage = _unit getHit _hitSelection};
-	private _newDamage = _damage - _oldDamage max 0;
-	private _playerHealth = damage _unit;
+if (_reviveMode != 0) then
+{
 
-	// Do any other damage calculations here
-	// _damage is the previous damage plus any new damage and will be applied
-	// as the total damage the unit has for this selection once this EH returns
-	if (_newDamage > 0) then {
-		// Reduce the new damage to 1/4 the amount
-		_damage = _oldDamage + (_newDamage * 0.25);
-	};
-	
-	// For players ignore damage if they are incapacitated and pass damage to bis revive handler
 	if ( isPlayer _unit ) then {
-		if ( lifeState _unit == "INCAPACITATED" ) then {
-			//if we are incapacitated take no damage
-			_damage = 0;
-		} else {
-			_this set[ 2, _damage ];
-			
-			_damage = _this call bis_fnc_reviveEhHandleDamage;
-		};
+		_unit removeAllEventHandlers 'HandleDamage';
 	};
+
+	_unit addEventHandler [ "HandleDamage", {
+		params ["_unit", "_hitSelection", "_damage","_source","_projectile","_hitPartIndex", "_instigator", "_hitPoint"];
 	
-	_damage
+		private _incomingDamage = _damage;
+		private _oldDamage = 0;
+		if (_hitSelection isEqualTo "") then {_oldDamage = damage _unit} else {_oldDamage = _unit getHit _hitSelection};
+		private _newDamage = _damage - _oldDamage max 0;
+		private _playerHealth = damage _unit;
+
+		// Do any other damage calculations here
+		// _damage is the previous damage plus any new damage and will be applied
+		// as the total damage the unit has for this selection once this EH returns
+		if (_newDamage > 0) then {
+			// Reduce the new damage to 1/4 the amount
+			_damage = _oldDamage + (_newDamage * 0.25);
+		};
 	
-}];
+		// For players ignore damage if they are incapacitated and pass damage to bis revive handler
+		if ( isPlayer _unit ) then {
+			if ( lifeState _unit == "INCAPACITATED" ) then {
+				//if we are incapacitated take no damage
+				_damage = 0;
+			} else {
+				_this set[ 2, _damage ];
+			
+				_damage = _this call bis_fnc_reviveEhHandleDamage;
+			};
+		};
+	
+		_damage
+	
+	}];
+};
 
 enableEngineArtillery false;
 if (player isKindOf "B_support_Mort_f") then {
